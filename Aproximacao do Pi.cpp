@@ -15,7 +15,7 @@ int main()
     #pragma omp parallel
     {
         double x;
-        #pragma omp for reduction (: sum)
+        #pragma omp for reduction (:+ sum)
         {
             for (i = 0; i < num_passos; i++)
             {
